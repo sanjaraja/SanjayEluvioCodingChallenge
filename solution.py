@@ -23,4 +23,9 @@ if  __name__ == "__main__":
             executor.map(fetch, [session] * 20, [url] * 20, ids)
             executor.shutdown(wait=True)
     """
-    fetch(requests.Session(), "https://eluv.io/items/", "cRF2dvDZQsmu37WGgK6MTcL7XjH")
+    #fetch(requests.Session(), "https://eluv.io/items/", "cRF2dvDZQsmu37WGgK6MTcL7XjH")
+    headers_dict = {
+        "Authorization": "Y1JGMmR2RFpRc211MzdXR2dLNk1UY0w3WGpI"
+    }
+    r= requests.get("https://eluv.io/items/cRF2dvDZQsmu37WGgK6MTcL7XjH", headers=headers_dict)
+    print(r.status_code)
