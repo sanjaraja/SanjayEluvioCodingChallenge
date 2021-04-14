@@ -12,6 +12,7 @@ def fetch(session, url, id):
         print(response.status_code)
 
 if  __name__ == "__main__":
+    """
     ids = ["cRF2dvDZQsmu37WGgK6MTcL7XjH"]
     for num in range(0, 20):
         ids.append(str(num))
@@ -21,3 +22,5 @@ if  __name__ == "__main__":
         with requests.Session() as session:
             executor.map(fetch, [session] * 20, [url] * 20, ids)
             executor.shutdown(wait=True)
+    """
+    fetch(requests.Session(), "https://eluv.io/items/", "cRF2dvDZQsmu37WGgK6MTcL7XjH")
