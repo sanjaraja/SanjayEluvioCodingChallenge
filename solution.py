@@ -4,6 +4,7 @@ import requests
 id_set = set()
 def fetch(session, url, id):
     if id not in id_set:
+        id_set.add(id)
         print("Entering fetch")
         headers = {
             "Authorization": "Y1JGMmR2RFpRc211MzdXR2dLNk1UY0w3WGpI"
